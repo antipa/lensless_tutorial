@@ -1,4 +1,11 @@
 import numpy as np
+from numpy import fft
+from IPython import display
+import time
+from numpy.fft import fft2
+from numpy.fft import ifft2
+from numpy.fft import fftshift
+from numpy.fft import ifftshift
 
 def im_downsample(x,N):
     for k in range(N):
@@ -6,7 +13,7 @@ def im_downsample(x,N):
     return x
 
 def fft_conv(x,y): 
-    return np.real(np.ifft2(np.fft2(np.ifftshift(y)) * np.fft2(x)))
+    return np.real(fft.ifft2(fft.fft2(fft.ifftshift(y)) * fft.fft2(x)))
 
 def create_impulse(siz, shift):
     delta = np.zeros(siz)
@@ -17,3 +24,4 @@ def drawnow(fig):
     display.display(fig)
     display.clear_output(wait=True)
     time.sleep(.01)
+    
