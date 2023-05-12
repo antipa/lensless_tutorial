@@ -25,3 +25,5 @@ def drawnow(fig):
     display.clear_output(wait=True)
     time.sleep(.01)
     
+
+    
