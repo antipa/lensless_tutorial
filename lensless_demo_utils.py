@@ -6,6 +6,9 @@ from numpy.fft import fft2
 from numpy.fft import ifft2
 from numpy.fft import fftshift
 from numpy.fft import ifftshift
+from numpy.fft import rfft2
+from numpy.fft import irfft2
+
 
 def im_downsample(x,N):
     for k in range(N):
